@@ -1,0 +1,93 @@
+.dashboard-container
+{
+    padding:1em;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: var(--bg4);
+    min-height: 100vh;
+}
+
+.dashboard-container .dashboard-profile
+{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-container .dashboard-profile-name
+{
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--text3)
+}
+
+.dashboard-container .dashboard-todos
+{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.dashboard-container .dashboard-todos .dashboard-todos-addTodoButton
+{
+    align-self: flex-end;
+    font-size: 1.1rem;
+    padding: .5em;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--bg2);
+    color: var(--text2);
+    cursor: pointer;
+}   
+
+.dashboard-container .dashboard-todos .dashboard-todos-addTodoButton:hover
+{
+    background-color: var(--bg1);
+}
+
+.dashboard-container .dashboard-todos .dashboard-todos-heading
+{
+    color: var(--text3)
+}
+
+.dashboard-container .dashboard-todos .dashboard-todos-list
+{
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+
+@media(max-width: 700px)
+{
+    .dashboard-container .dashboard-todos .dashboard-todos-list
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px)
+{
+
+    .dashboard-container .dashboard-profile
+    {
+        flex-direction: column;
+        gap: .5em;
+    }
+
+    .dashboard-container .dashboard-profile-name
+    {
+        order: 2;
+        font-size: 2.5rem;
+    }
+
+    .dashboard-container .dashboard-todos .dashboard-todos-list
+    {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,46 @@
+.profile-update-form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-update-form .profile-update-form-field
+{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.profile-update-form .profile-update-form-label
+{
+    font-size: 1.1rem;
+    color:var(--text3)
+}
+
+.profile-update-form .profile-update-form-input
+{
+    font-size: 1.1rem;
+    color:var(--text3);
+    padding: .3em;
+    border-radius: 5px;
+    border:none;
+    outline: none;
+}
+
+.profile-update-form .profile-update-form-error
+{
+    color: crimson;
+}
+
+.profile-update-form .profile-update-form-submitButton
+{
+    font-size: 1.1rem;
+    align-self: center;
+    padding: .3em;
+    border:none;
+    border-radius: 5px;
+    color: var(--text2);
+    background-color: var(--bg1);
+    cursor: pointer;
+}

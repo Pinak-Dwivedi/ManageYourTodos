@@ -1,0 +1,65 @@
+/* Profile Info */
+
+.dashboard-container .dashboard-profile-info
+{
+    position: relative;
+}
+
+.dashboard-container .dashboard-profile-info-button
+{
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .3);
+    background-color: var(--bg3);
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .5);
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-container .dashboard-profile-info-button:hover
+{
+    transform: scale(.95);
+    background-color: #8fe6aa;
+}
+.dashboard-profile-info-button .dashboard-profile-info-image 
+{
+    border-radius: 50%;
+    /* padding: .05em; */
+    width: 7rem;
+    height: 7rem;
+    pointer-events: none;
+}
+
+.dashboard-profile-info .dashboard-profile-info-content
+{
+    position: absolute;
+    right: 0;
+    background-color: var(--bg3);
+    border:1px solid var(--bg1);
+    border-radius: 15px;
+    box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, .5);
+    padding: 1em;
+
+    transform: translateY(-15px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 170ms ease-in-out, transform 170ms ease-in-out;
+}
+
+.dashboard-profile-info.active .dashboard-profile-info-content
+{
+    transform: translateY(0px);
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+@media(max-width: 500px)
+{
+    .dashboard-profile-info .dashboard-profile-info-content
+    {
+        right: -100%;
+    }
+}

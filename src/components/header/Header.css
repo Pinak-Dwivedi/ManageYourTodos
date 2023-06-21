@@ -1,0 +1,140 @@
+.header
+{
+    background-color: var(--bg1);
+    padding: 0em 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+}
+
+.header .header-brand
+{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header-logo
+{
+    width: 2.5rem;
+}
+
+
+.header .header-nav-list
+{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.header .header-nav-list-item-link
+{
+    padding: 1em;
+    text-decoration: none;
+    color: var(--text2);
+    display: flex;
+    align-items: center;
+    gap:.3rem;
+    border: none;
+    outline:none;
+    background: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.header .header-nav-list-item-link-icon 
+{
+    position: relative;
+    bottom:.1rem;
+}
+
+
+.header .header-nav-list-item-link:hover
+{
+    background-color: var(--bg2);
+}
+
+
+.header .header-hamburger
+{
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .17rem;
+
+    background-color: var(--text5);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: .9rem;
+    display: none;
+}
+
+.header .header-hamburger:hover
+{
+    background-color: var(--text2);
+}
+
+.header-hamburger .hamburger-slice
+{
+    background-color: var(--text2);
+    width: 1.5rem;
+    height: .25rem;
+    border-radius: 15px;
+}
+
+.header .header-hamburger:hover > .hamburger-slice
+{
+    background-color: var(--text5);
+}
+
+@media(max-width: 750px)
+{
+    .header
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: .5em;
+        gap: 0;
+    }
+
+    .header .header-hamburger
+    {
+        display: flex;
+    }
+
+    .header .header-nav
+    {
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        width: 100%;
+        transition: height .7s ease-in-out, opacity .7s ease-in-out, margin .7s ease-in-out;
+    } 
+
+    .header .header-nav.active
+    {
+        height: 8.5rem;
+        opacity: 1;
+        margin-top: 1rem;
+    }
+
+    .header .header-nav-list
+    {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header .header-nav-list-item-link
+    {
+        justify-content: center;
+    }
+}
