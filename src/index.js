@@ -31,7 +31,7 @@ function AuthWrapper()
         })
 
         const data = await response.json();
-
+        console.log(process.env.REACT_APP_SERVER_URL);
         // console.log(data);
 
         if(!data.success)
