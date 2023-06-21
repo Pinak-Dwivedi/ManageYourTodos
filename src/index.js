@@ -12,7 +12,7 @@ function AuthWrapper()
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(false);
   
-
+  console.log(process.env.REACT_APP_SERVER_URL);
   const value = {
     authUser,
     setAuthUser,
@@ -31,7 +31,7 @@ function AuthWrapper()
         })
 
         const data = await response.json();
-        console.log(process.env.REACT_APP_SERVER_URL);
+
         // console.log(data);
 
         if(!data.success)
