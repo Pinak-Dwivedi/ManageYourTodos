@@ -11,8 +11,8 @@ function AuthWrapper()
   const [authUser, setAuthUser] = useState({});
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(false);
+
   
-  console.log(process.env.REACT_APP_SERVER_URL);
   const value = {
     authUser,
     setAuthUser,
@@ -26,7 +26,7 @@ function AuthWrapper()
 
     (async () =>{
       try {
-        const response = await fetch(`https://manage-your-todos-backend.onrender.com/users/checkIfAuthenticated`,{
+        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/users/checkIfAuthenticated`,{
         credentials: "include"
         })
 
