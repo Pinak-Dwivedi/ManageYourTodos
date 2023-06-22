@@ -60,7 +60,7 @@ function AuthWrapper()
   return(
     <React.StrictMode>  
       <AuthContext.Provider value={value}>
-        <BrowserRouter>
+        <BrowserRouter basename="/ManageYourTodos">
           <App/>
         </BrowserRouter>
       </AuthContext.Provider>
