@@ -18,7 +18,6 @@ const ResetPassword = lazy( () => import("./components/resetPassword/ResetPasswo
 
 
 function App() {
-
   return (
     <div className="App">
       <Header/>
