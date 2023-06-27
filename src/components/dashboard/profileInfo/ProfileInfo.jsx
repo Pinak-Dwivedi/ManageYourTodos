@@ -42,7 +42,7 @@ export default function ProfileInfo( {profileImage} )
             profileImage == null ? 
             <FaUserTie  className="dashboard-profile-info-image" size={"5rem"} color="#009fbd"/>
             :
-            <img className="dashboard-profile-info-image" src={`${process.env.REACT_APP_SERVER_URL}/${profileImage}`} />
+            <img className="dashboard-profile-info-image" alt = "Profile Pic" src={`${process.env.REACT_APP_SERVER_URL}/${profileImage}`} />
             }   
         </button>
         

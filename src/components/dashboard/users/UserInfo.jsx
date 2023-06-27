@@ -127,7 +127,12 @@ export default function UserInfo({setUsers, userId, userName, userEmail})
 
         <div className="user-buttons">
             <button className="user-view-todos-button user-button" onClick={() => navigate(`/usertodos/${userId}`, {state: {userName: updateName}})}>View Todos</button>
-            <button className="user-update-button user-button" onClick={updateUser}>Update</button>
+            <button className="user-update-button user-button" onClick={() => {
+                if(loading)
+                return false;
+
+                updateUser();
+            }}>Update</button>
             <button className="user-delete-button user-button" onClick={() => confirmBoxRef.current.classList.add("active") }>Delete</button>
         </div>
         </>

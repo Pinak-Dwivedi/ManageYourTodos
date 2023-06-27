@@ -4,7 +4,7 @@ import AuthContext from "../../index";
 
 export default function ConfirmBox({ confirmBoxRef, deleteFunction})
 {   
-    const {loading, setLoading} = useContext(AuthContext);
+    const {loading} = useContext(AuthContext);
 
     useEffect( () => {
 
@@ -19,7 +19,7 @@ export default function ConfirmBox({ confirmBoxRef, deleteFunction})
                 clearTimeout(timerId)
             }
 
-    }, [])
+    }, [confirmBoxRef])
 
     return(
     <div className="confirmBox-overlay">

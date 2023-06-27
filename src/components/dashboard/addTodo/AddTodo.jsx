@@ -1,6 +1,6 @@
 import "./AddTodo.css"
 import {useState, useContext, useRef, useEffect } from 'react';
-import { Navigate, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import AuthContext from '../../../index';
 import toast from "react-hot-toast";
 
@@ -19,9 +19,6 @@ export default function AddTodo()
     
     const userId = location.state !=null ? location.state.userId : null;
 
-    // if(!isAuthenticated)
-    // return <Navigate to="/"/>
-
     useEffect(()=>{
         
         if(!isAuthenticated)
@@ -33,7 +30,7 @@ export default function AddTodo()
         bodyRef.current.style.height = "1px";
         bodyRef.current.style.height = (5+bodyRef.current.scrollHeight)+"px";
 
-    },[title, body])
+    },[title, body, isAuthenticated, navigate])
 
     async function addTodo(e)
     {

@@ -1,4 +1,4 @@
-import {Link, useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {RiLogoutCircleFill} from 'react-icons/ri'
 import AuthContext from '../../index';
 import { useContext } from 'react';
@@ -9,7 +9,6 @@ export default function Logout()
 {
 
     const {setAuthUser, isAuthenticated, setIsAuthenticated, loading, setLoading} = useContext(AuthContext);
-    const navigate = useNavigate();
 
     async function logOut(event)
     {

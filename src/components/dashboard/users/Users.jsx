@@ -1,11 +1,9 @@
 import "./Users.css";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import UserInfo from "./UserInfo";
-import AuthContext from "../../../index";
 
 export default function Users()
 {
-    const {authUser} = useContext(AuthContext);
     const [users, setUsers] = useState([]);
 
 

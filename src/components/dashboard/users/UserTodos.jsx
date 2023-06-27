@@ -37,7 +37,7 @@ export default function UserTodos()
 
         })();
 
-    },[])
+    },[id])
     
     if(authUser.role == null || !isAuthenticated)
     return <Navigate to="/"/>
