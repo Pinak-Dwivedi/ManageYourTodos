@@ -4,7 +4,7 @@
     background-image: url("../../assets/images/hero-image.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100vh;
     
     padding: 1em;
     font-weight: 500;
@@ -20,7 +20,7 @@
     background-image: url("../../assets/images/mental-peace-image.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:100% 100vh;
 
     padding: 5em 1em;
     font-weight: 500;

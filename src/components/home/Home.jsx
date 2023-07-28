@@ -3,7 +3,6 @@ import {Navigate} from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../../index";
 
-// may add some more content in home container
 export default function Home(){
 
     const {isAuthenticated} = useContext(AuthContext);
