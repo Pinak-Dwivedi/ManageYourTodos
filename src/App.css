@@ -1,43 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,500&display=swap");
 
-*
-{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif; 
-    
-    --bg1: #b396f5; 
-    --bg2: #ACBCFF;
-    --bg3: #a5e3b9;
-    --bg4: #c7f2ee;
-    --bg5: #e44666;
-    --bg6: #539165;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 
-    --text1: #AEE2FF; 
-    --text2: #E6FFFD;   
-    --text3: #009FBD;
-    --text4: #643843;
-    --text5: #537188;
+  --bg1: #b396f5;
+  --bg2: #acbcff;
+  --bg3: #a5e3b9;
+  --bg4: #c7f2ee;
+  --bg5: #e44666;
+  --bg6: #539165;
+
+  --text1: #aee2ff;
+  --text2: #e6fffd;
+  --text3: #009fbd;
+  --text4: #643843;
+  --text5: #537188;
 }
 
-body
-{
-    background-color: var(--bg3);
+body {
+  background-color: var(--bg3);
 }
 
-@media(max-width:560px)
-{
-    html
-    {
-        font-size: 14px;
-    }
+img {
+  max-width: 100%;
 }
 
-@media(max-width: 400px)
-{
-    html
-    {
-        font-size: 12px;
-    }
+@media (max-width: 560px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 300px) {
+  html {
+    font-size: 10px;
+  }
 }
